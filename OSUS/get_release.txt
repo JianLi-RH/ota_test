@@ -1,0 +1,6 @@
+curl -s 'https://api.openshift.com/api/upgrades_info/graph?channel=candidate-4.12' | jq -r '.nodes[] | select(.version == "4.12.81").metadata'
+{
+  "io.openshift.upgrades.graph.release.channels": "candidate-4.12,eus-4.12,fast-4.12,stable-4.12,candidate-4.13,fast-4.13,stable-4.13,candidate-4.14,eus-4.14,fast-4.14,stable-4.14",
+  "io.openshift.upgrades.graph.release.manifestref": "sha256:61b4941f76aeed8f65735643d96a6cd4a823018cb7ca40d6966dd098bc8dc284",
+  "url": "https://access.redhat.com/errata/RHSA-2025:17671"
+}
