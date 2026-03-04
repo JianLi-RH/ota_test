@@ -98,7 +98,7 @@
             {
               "type": "PromQL",
               "promql": {
-                "promql": "cluster_infrastructure_provider{type=~\"any|none|unknown\"}\nor\n0 * cluster_infrastructure_provider"
+                "promql": "cluster_infrastructure_provider{type=~\"None|Azure|AWS|GCP|OpenStack|AlibabaCloud|BareMetal\"}\nor\n0 * cluster_infrastructure_provider"
               }
             }
           ]
