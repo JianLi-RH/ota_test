@@ -1,8 +1,15 @@
 {
   "nodes": [
     {
-      "version": "4.22.0-0-2026-03-04-012530-test-ci-ln-h37klzb-latest",
+      "version": "4.22.0-0-2026-03-09-013700-test-ci-ln-0jqd7jb-latest",
       "payload": "registry.ci.openshift.org/ocp/release@sha256:46b3349fd7d536b51eed67f3379b972fc6cf3ac3863effcd1098d2dd14357acf",
+      "metadata": {
+        "io.openshift.upgrades.graph.release.channels": "candidate-4.22"
+      }
+    },
+    {
+      "version": "4.22.0-ec.0",
+      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:fa50ad76be25a54235058782d1844a236f64a9a0e9764eedb885ccf1565286c4",
       "metadata": {
         "io.openshift.upgrades.graph.release.channels": "candidate-4.22"
       }
@@ -30,11 +37,12 @@
     }
   ],
   "edges": [
+    [0,1]
   ],
   "conditionalEdges":[
     {
       "edges": [
-        {"from": "4.22.0-0-2026-03-04-012530-test-ci-ln-h37klzb-latest", "to": "4.22.0-ec.1"}
+        {"from": "4.22.0-0-2026-03-09-013700-test-ci-ln-0jqd7jb-latest", "to": "4.22.0-ec.1"}
       ],
       "risks": [
         {
@@ -54,7 +62,7 @@
     },
     {
       "edges": [
-        {"from": "4.22.0-0-2026-03-04-012530-test-ci-ln-h37klzb-latest", "to": "4.22.0-ec.2"}
+        {"from": "4.22.0-0-2026-03-09-013700-test-ci-ln-0jqd7jb-latest", "to": "4.22.0-ec.2"}
       ],
       "risks": [
         {
@@ -87,7 +95,7 @@
     },
     {
       "edges": [
-        {"from": "4.22.0-0-2026-03-04-012530-test-ci-ln-h37klzb-latest", "to": "4.22.0-ec.3"}
+        {"from": "4.22.0-0-2026-03-09-013700-test-ci-ln-0jqd7jb-latest", "to": "4.22.0-ec.3"}
       ],
       "risks": [
         {
