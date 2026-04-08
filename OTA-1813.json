@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "version": "4.22.0-0.nightly-2026-04-06-051707",
+      "payload": "registry.ci.openshift.org/ocp/release@sha256:e0da447bdc974a43d8529f8d86ace5a3aef47934f7f4637ddb9dc636da81a531",
+      "metadata": {
+        "io.openshift.upgrades.graph.release.channels": "candidate-4.22"
+      }
+    },
+    {
+      "version": "4.22.0-ec.3",
+      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:58b98da1492b3f4af6129c4684b8e8cde4f2dc197e4b483bb6025971d59f92a5",
+      "metadata": {
+        "io.openshift.upgrades.graph.release.channels": "candidate-4.22"
+      }
+    },
+    {
+      "version": "4.22.0-ec.4",
+      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:b84ed0c8d9db452ca46c49572cb722a3224b53b252216b6eaa0d5eb8f8ee5d32",
+      "metadata": {
+        "io.openshift.upgrades.graph.release.channels": "candidate-4.22"
+      }
+    }
+  ],
+  "edges": [
+    [0,1]
+  ],
+  "conditionalEdges":[
+    {
+      "edges": [
+        {"from": "4.22.0-0.nightly-2026-04-06-051707", "to": "4.22.0-ec.4"}
+      ],
+      "risks": [
+        {
+          "url": "https://bug.example.com/a",
+          "name": "SomeInvokerThing",
+          "message": "On clusters on default invoker user, this imaginary bug can happen.",
+          "matchingRules": [
+            {
+              "type": "PromQL",
+              "promql": {
+                "promql": "cluster_installer"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
